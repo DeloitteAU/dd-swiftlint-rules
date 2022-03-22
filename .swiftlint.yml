@@ -1,3 +1,15 @@
+included: # paths to include during linting. `--path` is ignored if present.
+  - TestApplication # Rename this to the name of your project
+  # - Africa
+  # - The name of directory during linting
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+  - Source/ExcludedFolder
+  - Source/ExcludedFile.swift
+  - Source/*/ExcludedFile.swift # Exclude files with a wildcard
+
 # By default, SwiftLint uses a set of sensible default rules you can adjust:
 disabled_rules: # rule identifiers turned on by default to exclude from running
   - trailing_whitespace
@@ -33,18 +45,7 @@ opt_in_rules:
 # only_rules: # delete `disabled_rules` & `opt_in_rules` if using this
 #   - empty_parameters
 #   - vertical_whitespace
-  
-included: # paths to include during linting. `--path` is ignored if present.
-  - TestApplication
-  # - Africa
-  # - The name of directory during linting
 
-excluded: # paths to ignore during linting. Takes precedence over `included`.
-  - Carthage
-  - Pods
-  - Source/ExcludedFolder
-  - Source/ExcludedFile.swift
-  - Source/*/ExcludedFile.swift # Exclude files with a wildcard
 analyzer_rules: # Rules run by `swiftlint analyze` (experimental)
   - explicit_self
 
