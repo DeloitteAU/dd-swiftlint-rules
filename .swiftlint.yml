@@ -6,9 +6,9 @@ included: # paths to include during linting. `--path` is ignored if present.
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Carthage
   - Pods
-  - Source/ExcludedFolder
-  - Source/ExcludedFile.swift
-  - Source/*/ExcludedFile.swift # Exclude files with a wildcard
+  # - Source/ExcludedFolder
+  # - Source/ExcludedFile.swift
+  # - Source/*/ExcludedFile.swift # Exclude files with a wildcard
 
 # By default, SwiftLint uses a set of sensible default rules you can adjust:
 disabled_rules: # rule identifiers turned on by default to exclude from running
@@ -55,6 +55,7 @@ force_unwrapping: warning
 force_cast: warning # implicitly
 force_try:
   severity: warning # explicitly
+  
 # rules that have both warning and error levels, can set just the warning level
 # implicitly
 line_length:
@@ -65,7 +66,6 @@ line_length:
   ignores_interpolated_strings: true
   ignores_urls: true
 
-
 # they can set both implicitly with an array
 type_body_length:
   - 300 # warning
@@ -74,6 +74,7 @@ type_body_length:
 file_length:
   warning: 500
   error: 1200
+  
 # naming rules can set warnings/errors for min_length and max_length
 # additionally they can set excluded names
 type_name:
