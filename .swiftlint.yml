@@ -1,16 +1,22 @@
+included: # paths to include during linting. `--path` is ignored if present.
+  - TestApplication # Rename this to the name of your project
+  # - Africa
+  # - The name of directory during linting
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+  # - Source/ExcludedFolder
+  # - Source/ExcludedFile.swift
+  # - Source/*/ExcludedFile.swift # Exclude files with a wildcard
+
 # By default, SwiftLint uses a set of sensible default rules you can adjust:
 disabled_rules: # rule identifiers turned on by default to exclude from running
   - trailing_whitespace
   
 opt_in_rules:
   - empty_count
-  - force_unwrapping
-  - operator_usage_whitespace
-  - multiline_parameters
-  - multiline_arguments
   - implicitly_unwrapped_optional
-  - modifier_order
-  - no_extension_access_modifier
   
   # Fomatting Specific Constructs
   # - comment_spacing (default enabled)
@@ -39,18 +45,7 @@ opt_in_rules:
 # only_rules: # delete `disabled_rules` & `opt_in_rules` if using this
 #   - empty_parameters
 #   - vertical_whitespace
-  
-included: # paths to include during linting. `--path` is ignored if present.
-  - TestApplication
-  # - Africa
-  # - The name of directory during linting
 
-excluded: # paths to ignore during linting. Takes precedence over `included`.
-  - Carthage
-  - Pods
-  - Source/ExcludedFolder
-  - Source/ExcludedFile.swift
-  - Source/*/ExcludedFile.swift # Exclude files with a wildcard
 analyzer_rules: # Rules run by `swiftlint analyze` (experimental)
   - explicit_self
 
@@ -60,6 +55,7 @@ force_unwrapping: warning
 force_cast: warning # implicitly
 force_try:
   severity: warning # explicitly
+  
 # rules that have both warning and error levels, can set just the warning level
 # implicitly
 line_length:
@@ -70,7 +66,6 @@ line_length:
   ignores_interpolated_strings: true
   ignores_urls: true
 
-
 # they can set both implicitly with an array
 type_body_length:
   - 300 # warning
@@ -79,6 +74,7 @@ type_body_length:
 file_length:
   warning: 500
   error: 1200
+  
 # naming rules can set warnings/errors for min_length and max_length
 # additionally they can set excluded names
 type_name:
