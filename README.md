@@ -1,8 +1,7 @@
-# Swiftlint custom rule
+# Swiftlint custom rules
 This repository contains the configuration file of Swiftlint that is based on Deloitte Digital's Swift Style Guide.
-***
 
-## Prerequiste
+## Prerequisite
 Install Swiftlint first by following the steps in [Swiftlint](https://github.com/realm/SwiftLint)
 
 Recommend using Homebrew to install Swiftlint.
@@ -21,4 +20,4 @@ Recommend using Homebrew to install Swiftlint.
 5. Create a Pull Request
 
 ## Documentation
-* You can find all you need about Swiftlint on this official Github page [Swiftlint](https://github.com/realm/SwiftLint), e.g How to define custom rules in Swiftlint, and how to use .swiftlint.yml configuration file
+You can find all you need about Swiftlint on this official Github page [Swiftlint](https://github.com/realm/SwiftLint), e.g How to define custom rules in Swiftlint, and how to use .swiftlint.yml configuration file
